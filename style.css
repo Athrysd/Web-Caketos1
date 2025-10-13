@@ -1,0 +1,216 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  min-height: 1000px;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.Navbar {
+  background-color: rgba(17, 0, 255, 0.6);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+  border-radius: 20px;
+  margin: 15px;
+}
+.logo img {
+  width: 275px;
+}
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+.nav-menu a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  font-weight: 800;
+}
+.navTombol {
+  display: none;
+}
+
+.landPage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* color: white; */
+  padding: 0 50px;
+}
+.bagianKiri {
+  display: flex;
+  flex-direction: column;
+  /* gap: 5px; */
+}
+.text {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1;
+}
+.text h1 span {
+  color: blue;
+}
+.salam {
+  font-size: 58px;
+}
+
+.sosmed {
+  display: flex;
+  justify-content: start;
+  gap: 50px;
+  margin-top: 20px;
+  width: 500px;
+}
+.sosmed i {
+  font-size: 50px;
+  color: blue;
+}
+.btn {
+  display: flex;
+  justify-content: start;
+  gap: 50px;
+  margin-top: 30px;
+  padding: 15px 0px;
+  /* background-color: blue; */
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn button {
+  background-color: transparent;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 4px solid rgb(64, 0, 255);
+  color: rgb(64, 0, 255);
+  font: 900 20px Arial, sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn button:hover {
+  background-color: blue;
+  color: white;
+}
+
+.bagianKanan img {
+  width: 500px;
+  border-radius: 20px;
+}
+
+#Visi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleVisi {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  margin-top: 100px;
+  width: 60vw;
+  background-color: blue;
+  color: white;
+  padding: 5px 0;
+  border-radius: 30px;
+}
+.titleVisi h1 {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.visi {
+  position: relative;
+  margin-top: 50px;
+  width: 60vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visi .isi-visi {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: justify;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+  padding: 0 40px; /* memberi ruang untuk tanda kutip */
+}
+
+/* tanda kutip kiri */
+.visi .quote-left {
+  position: absolute;
+  left: -50px;
+  top: -70px;
+  font-size: 120px;
+  color: blue;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+/* tanda kutip kanan */
+.visi .quote-right {
+  position: absolute;
+  right: -40px;
+  bottom: -120px;
+  font-size: 120px;
+  color: blue;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+
+.awalMisi {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* text-align: center; */
+  margin: 50px 0;
+  gap: 60px;
+  width: 80vw;
+}
+.awalMisi h1 {
+  font-size: 28px;
+  font-weight: 800;
+  width: 50vw;
+  line-height: 1.5;
+}
+
+.awalMisi button {
+  background-color: blue;
+  color: white;
+  padding: 15px 25px;
+  border: 4px solid blue;
+  border-radius: 30px;
+  cursor: pointer;
+  font: 900 20px Arial, sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+
+.awalMisi button:hover {
+  background-color: white;
+  color: blue;
+  border: 4px solid blue;
+}
