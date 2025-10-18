@@ -1,5 +1,20 @@
+:root {
+  --primary: #ffd633; /* Kuning Cerah */
+  --secondary: #ff3b30; /* Merah Enerjik */
+  --accent: #2ecc71; /* Hijau Harapan */
+  --support: #3498db; /* Biru Kepercayaan */
+  --bg: #ffffff; /* Background */
+  --text: #2c3e50; /* Text */
+  --soft-gray: #f4f4f4; /* Soft Gray */
+}
+
+a {
+  color: var(--support);
+  text-decoration: none;
+}
+
 .kosong {
-  height: 150px;
+  height: 100px;
 }
 
 html {
@@ -10,6 +25,8 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   min-height: 1000px;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 nav {
@@ -20,14 +37,16 @@ nav {
   z-index: 1000;
 }
 
+#bars {
+  display: none;
+}
 .navbar {
-  background-color: rgba(17, 0, 255, 0.6);
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+  background-color: rgba(52, 152, 219, 0.6); /* rgba of --support */
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   padding: 10px 50px;
-  /* border-radius: 20p y8  x; */
-  /* margin: 15px; */
 }
 .logo img {
   width: 275px;
@@ -41,25 +60,41 @@ nav {
 .nav-menu a {
   list-style: none;
   text-decoration: none;
-  color: white;
-  font-size: 22px;
+  color: var(--text);
+  font-size: 20px;
   font-weight: 800;
+  transition: all 0.3s ease-in-out;
+}
+.nav-menu a:hover {
+  color: var(--primary);
+}
+.nav-menu a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: var(--primary);
+  transform-origin: center;
+  transform: scale(0);
+  border-radius: 5px;
+}
+.nav-menu a:hover::after {
+  transform: scale(1);
+  width: 100%;
+  transition: width 0.3s;
 }
 .navTombol {
   display: none;
 }
-
 .landPage {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* color: white; */
-  padding: 0 50px;
+  padding: 0 120px;
 }
 .bagianKiri {
   display: flex;
   flex-direction: column;
-  /* gap: 5px; */
 }
 .text {
   font-size: 20px;
@@ -68,7 +103,7 @@ nav {
   line-height: 1;
 }
 .text h1 span {
-  color: blue;
+  color: var(--secondary);
 }
 .salam {
   font-size: 58px;
@@ -83,7 +118,12 @@ nav {
 }
 .sosmed i {
   font-size: 50px;
-  color: blue;
+  color: var(--accent);
+}
+.sosmed i:hover {
+  color: var(--support);
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
 }
 .btn {
   display: flex;
@@ -91,8 +131,7 @@ nav {
   gap: 50px;
   margin-top: 30px;
   padding: 15px 0px;
-  /* background-color: blue; */
-  color: white;
+  color: var(--text);
   font-size: 20px;
   font-weight: 800;
   border: none;
@@ -105,15 +144,17 @@ nav {
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  border: 4px solid rgb(64, 0, 255);
-  color: rgb(64, 0, 255);
+  border: 4px solid var(--primary);
+  color: var(--primary);
   font: 900 20px Arial, sans-serif;
+  /* filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5)); */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease-in-out;
 }
 
 .btn a button:hover {
-  background-color: blue;
-  color: white;
+  background-color: var(--primary);
+  color: var(--bg);
 }
 
 .bagianKanan img {
@@ -126,14 +167,15 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 20px;
 }
 
 .titleVisi {
   max-width: 900px;
   width: 90%;
-  margin: 100px auto 0; /* center dengan margin auto */
-  background-color: blue;
-  color: white;
+  margin: 100px auto 0;
+  background-color: var(--primary);
+  color: var(--text);
   padding: 5px 0;
   border-radius: 30px;
   text-align: center;
@@ -159,7 +201,7 @@ nav {
   line-height: 1.5;
   position: relative;
   z-index: 1;
-  padding: 0 40px; /* memberi ruang untuk tanda kutip */
+  padding: 0 40px;
 }
 
 /* tanda kutip kiri */
@@ -168,8 +210,8 @@ nav {
   left: -50px;
   top: -70px;
   font-size: 120px;
-  color: blue;
-  font-family: 'Times New Roman', Times, serif;
+  color: var(--secondary);
+  font-family: "Times New Roman", Times, serif;
   font-weight: bold;
 }
 
@@ -179,35 +221,32 @@ nav {
   right: -40px;
   bottom: -120px;
   font-size: 120px;
-  color: blue;
-  font-family: 'Times New Roman', Times, serif;
+  color: var(--secondary);
+  font-family: "Times New Roman", Times, serif;
   font-weight: bold;
 }
-
 
 .awalMisi {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /* text-align: center; */
-  /* margin: 50px 0; */
-  margin-left : -100px;
   gap: 60px;
   width: 80vw;
 }
 .awalMisi h1 {
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 800;
   width: 50vw;
   line-height: 1.5;
+  color: var(--accent);
 }
 
 .awalMisi button {
-  background-color: blue;
-  color: white;
+  background-color: var(--support);
+  color: var(--bg);
   padding: 15px 25px;
-  border: 4px solid blue;
+  border: 4px solid var(--support);
   border-radius: 30px;
   cursor: pointer;
   font: 900 20px Arial, sans-serif;
@@ -215,72 +254,82 @@ nav {
 }
 
 .awalMisi button:hover {
-  background-color: white;
-  color: blue;
-  border: 4px solid blue;
+  background-color: var(--bg);
+  color: var(--support);
+  border: 4px solid var(--support);
 }
 
-.misi{
+.misi {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 100px;
+  gap: 50px;
   margin-bottom: 100px;
 }
 
-.isiMisi{
-  width: 80vw;
+.isiMisi {
+  width: 70vw;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 30px;
-  background-color: rgba(17, 0, 255, 0.6);
-  padding: 40px;
+  background-color: rgba(52, 152, 219, 0.6);
   border-radius: 50px 0px 0px 50px;
 }
-.nomor{
-  background-color: blue;
-  color: white;
-  font-size: 50px;
+.nomor {
+  background-color: var(--primary);
+  color: var(--soft-gray);
   font-weight: 800;
-  width: 170px;
-  height: 100px;
+  font-size: 40px;
+  width: 120px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
 }
+.isiMisi h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+}
 
-.misi2{
+.misi2 {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 100px;
   margin-bottom: 100px;
 }
-.isiMisi2{
-  width: 80vw;
+.isiMisi2 {
+  width: 70vw;
+  padding: 20px;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   gap: 30px;
-  background-color: rgba(17, 0, 255, 0.6);
-  padding: 40px;
+  background-color: var(--accent);
   border-radius: 0px 50px 50px 0px;
 }
-.nomor2{ 
-  background-color: blue;
-  color: white;
-  font-size: 50px;
+.nomor2 {
+  background-color: var(--support);
+  color: var(--primary);
   font-weight: 800;
-  width: 170px;
-  height: 100px;
+  font-size: 40px;
+  width: 120px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+}
+.isiMisi2 h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .proKer {
@@ -296,8 +345,8 @@ nav {
   font-weight: 800;
   margin-top: 100px;
   width: 60vw;
-  background-color: blue;
-  color: white;
+  background-color: var(--primary);
+  color: var(--text);
   padding: 5px 0;
   border-radius: 30px;
 }
@@ -313,11 +362,11 @@ nav {
   justify-content: center;
   gap: 50px;
   margin-top: 50px;
-  width: 80vw;
+  width: 90vw;
 }
 
-.judulProker1, .judulProker2 {
-  background-color: rgba(17, 0, 255, 0.6);
+.judulProker1 {
+  background-color: var(--support);
   width: 300px;
   height: 175px;
   border-radius: 30px;
@@ -328,52 +377,475 @@ nav {
   text-align: center;
   padding: 20px;
   gap: 20px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.judulProker2 {
+  background-color: var(--accent);
+  width: 300px;
+  height: 175px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  gap: 20px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
-.judulProker1 h1, .judulProker2 h1 {
+.judulProker1 h1,
+.judulProker2 h1 {
   font-size: 20px;
   font-weight: 800;
-  color: white;
+  color: var(--bg);
 }
 
-.judulProker1:hover, .judulProker2:hover {
-  background-color: blue;
-  cursor: pointer;
+.judulProker1:hover {
+  background-color: var(--accent);
   transform: scale(1.05);
+  color: var(--bg);
 }
 
-
-.judulProker1 button, .judulProker2 button{
-  background-color: white;
+.judulProker2:hover {
+  background-color: var(--support);
+  transform: scale(1.05);
+  color: var(--bg);
+}
+.judulProker1 button,
+.judulProker2 button {
+  background-color: var(--bg);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   width: 250px;
-  color: blue;
+  color: var(--support);
   padding: 10px 10px;
-  border: 4px solid white;
+  border: 4px solid var(--bg);
   border-radius: 30px;
   cursor: pointer;
   font: 900 18px Arial, sans-serif;
   transition: all 0.5s ease-in-out;
 }
-.judulProker1 button:hover, .judulProker2 button:hover{
-  background-color: blue;
-  color: white;
-  border: 4px solid white;
+.judulProker1 button:hover,
+.judulProker2 button:hover {
+  background-color: var(--primary);
+  color: var(--bg);
+  border: 4px solid var(--bg);
 }
 
-.judulProker1 .arrow, .judulProker2 .arrow {
+.judulProker1 button .arrow,
+.judulProker2 button .arrow {
   margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: blue;
+  background-color: var(--support);
   border-radius: 50%;
   padding: 13px;
 }
-.judulProker1 .arrow i, .judulProker2 .arrow i {
+.judulProker1 .arrow i,
+.judulProker2 .arrow i {
   font-size: 20px;
-  color: white;
+  color: var(--bg);
+}
+.isiProker1,
+.isiProker2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0%;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.aktif {
+  opacity: 100%;
+  pointer-events: all;
+}
+
+.isiProker1 .background1,
+.isiProker2 .background2 {
+  background-color: var(--bg);
+  width: 40%;
+  height: 40%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 50px;
+  position: relative;
+}
+
+.isiProker1 .background1 h1,
+.isiProker2 .background2 h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text);
+}
+.isiProker1 .background1 .tutup,
+.isiProker2 .background2 .tutup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--support);
+  color: var(--bg);
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font: 900 18px Arial, sans-serif;
+  transition: all 0.5s ease-in-out;
+  border: 4px solid var(--support);
+}
+.isiProker1 .background1 .tutup:hover,
+.isiProker2 .background2 .tutup:hover {
+  background-color: var(--bg);
+  color: var(--support);
+  border: 4px solid var(--support);
+}
+
+.footer {
+  background-color: var(--text);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 20px 0;
+  color: var(--bg);
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  border-top: 5px solid #615f7b;
+  display: flex;
+}
+
+/* CSS untuk Footer */
+footer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  height: auto;
+  gap: 75px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.sosmedFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+span .nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 800;
+  transition: all 0.3s ease-in-out;
+}
+
+.sosmedFooter a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
+}
+.copyright {
+  border-top: #444 2px solid;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+.copyright p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.logo img {
+  width: 300px;
+  /* Sesuaikan ukuran logo */
+}
+/* tampilan tablet and smaller: show hamburger, hide full nav */
+@media (max-width: 1024px) {
+  /* show the nav button container and the icon */
+  .navTombol {
+    display: block;
+    z-index: 1200;
+  }
+  #bars {
+    display: block;
+    color: var(--text);
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  /* hide the regular nav links on smaller screens */
+
+  /* small adjustments */
+  .navbar {
+    padding: 8px 24px;
+  }
+}
+
+/* Tampilan Hp (mobile) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .landPage {
+    padding: 30px;
+  }
+    .navTombol {
+    display: block;
+    z-index: 1200;
+  }
+  #bars {
+    display: none;
+  }
+
+  .nav-menu a{
+    font-size: 16px;
+  }
+  /* hide the regular nav links on smaller screens */
+
+  /* small adjustments */
+  .navbar {
+    padding: 8px 20px;
+  }
+  .navbar .logo img {
+    width: 200px;
+  }
+
+  .landPage {
+    flex-direction: column-reverse;
+    gap: 30px;
+    text-align: center;
+  }
+  .bagianKiri {
+    align-items: center;
+  }
+  .sosmed {
+    justify-content: center;
+    width: 100%;
+  }
+  .bagianKanan img {
+    width: 300px;
+  } 
+  #Visi {
+  gap: 30px;
+}
+
+.titleVisi {
+  width: 70%;
+}
+.titleVisi h1 {
+  font-size: 18px;
+}
+.visi {
+  width: 70%;
+
+}
+
+
+/* tanda kutip kiri */
+.visi .quote-left {
+  font-size: 100px;
+}
+
+/* tanda kutip kanan */
+.visi .quote-right {
+  font-size: 100px;
+}
+
+.awalMisi {
+  width: 85vw;
+}
+.awalMisi h1 {
+  font-size: 24px;
+  width: 70vw;
+}
+
+.awalMisi button {
+  font-size: 16px;
+}
+
+
+.misi {
+  gap: 10px;
+  margin-bottom: 100px;
+}
+
+.isiMisi {
+  width: 70vw;
+  padding: 20px;
+}
+.nomor {
+  font-size: 30px;
+  width: 120px;
+  height: 70px;
+}
+.isiMisi h1 {
+  font-size: 16px;
+}
+
+.misi2 {
+  gap: 100px;
+  margin-bottom: 100px;
+}
+.isiMisi2 {
+  width: 70vw;
+  padding: 20px;
+  gap: 30px;
+}
+.nomor2 {
+  font-size: 30px;
+  width: 120px;
+  height: 70px;
+}
+.isiMisi2 h1 {
+  font-size: 16px;
+}
+
+
+.proKer {
+  margin-bottom: 100px;
+}
+.titleProker {
+  text-align: center;
+  font-weight: 800;
+  margin-top: 100px;
+  width: 80vw;
+  background-color: var(--primary);
+  color: var(--text);
+  padding: 15px;
+  border-radius: 30px;
+}
+
+.titleProker h1 {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.wrapper {
+  width: 90vw;
+}
+
+.judulProker1 {
+  width: 250px;
+  height: 200px;
+  padding: 20px;
+  gap: 20px;
+}
+.judulProker2 {
+  background-color: var(--accent);
+  width: 225px;
+  height: 200px;
+  padding: 20px;
+  gap: 20px;
+}
+
+.judulProker1 h1,
+.judulProker2 h1 {
+  font-size: 16px;
+}
+
+
+.judulProker1 button,
+.judulProker2 button {
+  width: 175px;
+  height: 75px;
+  padding: 10px 10px;}
+
+
+.isiProker1 .background1 h1,
+.isiProker2 .background2 h1 {
+  font-size: 24px;
+}
+
+.footer-content {
+  gap: 0px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sosmedFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.nav-menu span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+ .nav-menu span a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 800;
+  transition: all 0.3s ease-in-out;
+}
+
+.sosmedFooter a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
+}
+.copyright {
+  border-top: #444 2px solid;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+.copyright p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.logo img {
+  width: 150px;
+  /* Sesuaikan ukuran logo */
+}
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .navTombol {
+    display: block;
+  }
+  #bars {
+    font-size: 26px;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .landPage {
+    padding: 30px;
+  }
 }
