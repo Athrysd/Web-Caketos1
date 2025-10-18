@@ -19,38 +19,53 @@ let proker5 = document.getElementById('isiProker5')
 let tutup5 = document.getElementById('close5')
 let buka5 = document.getElementById('pelajari5')
 
-buka1.addEventListener("click", function(){
+buka1.addEventListener("click", function () {
   proker1.classList.add("aktif")
 })
-tutup1.addEventListener("click", function(){
+tutup1.addEventListener("click", function () {
   proker1.classList.remove("aktif")
 })
 
 
-buka2.addEventListener("click", function(){
+buka2.addEventListener("click", function () {
   proker2.classList.add("aktif")
 })
-tutup2.addEventListener("click", function(){
+tutup2.addEventListener("click", function () {
   proker2.classList.remove("aktif")
 })
 
-buka3.addEventListener("click", function(){
+buka3.addEventListener("click", function () {
   proker3.classList.add("aktif")
 })
-tutup3.addEventListener("click", function(){
+tutup3.addEventListener("click", function () {
   proker3.classList.remove("aktif")
 })
 
-buka4.addEventListener("click", function(){
+buka4.addEventListener("click", function () {
   proker4.classList.add("aktif")
 })
-tutup4.addEventListener("click", function(){
+tutup4.addEventListener("click", function () {
   proker4.classList.remove("aktif")
 })
 
-buka5.addEventListener("click", function(){
+buka5.addEventListener("click", function () {
   proker5.classList.add("aktif")
 })
-tutup5.addEventListener("click", function(){
+tutup5.addEventListener("click", function () {
   proker5.classList.remove("aktif")
+})
+
+
+const navBar = document.getElementById('navMenu')
+const bar = document.getElementById('bars')
+
+bar.addEventListener("click", function () {
+  navBar.classList.toggle("active")
+})
+
+
+document.addEventListener("click", function (e) {
+  if (!navBar.contains(e.target) && !bar.contains(e.target)) {
+    navBar.classList.remove("active");
+  }
 })

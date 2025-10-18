@@ -121,10 +121,16 @@ nav {
   color: var(--accent);
 }
 .sosmed i:hover {
-  color: var(--support);
   transform: scale(1.2);
   transition: all 0.3s ease-in-out;
 }
+.sosmed span a i:hover{
+  color: var(--secondary);
+}
+.sosmed span1 a i:hover{
+  color: var(--support);
+}
+
 .btn {
   display: flex;
   justify-content: start;
@@ -563,10 +569,19 @@ footer {
   align-items: center;
   gap: 30px;
 }
-span .nav-menu a {
+.nav-menu span  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  transition: all 0.3s ease-in-out;
+  margin-top: -20px;
+}
+.nav-menu span a {
   color: #fff;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   transition: all 0.3s ease-in-out;
 }
@@ -575,6 +590,17 @@ span .nav-menu a {
   color: #fff;
   text-decoration: none;
   font-size: 32px;
+}
+.sosmedFooter i:hover {
+  color: var(--accent);
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+.sosmedFooter span a i:hover{
+  color: var(--secondary);
+}
+.sosmedFooter span1 a i:hover{
+  color: var(--support);
 }
 .copyright {
   border-top: #444 2px solid;
@@ -619,7 +645,7 @@ span .nav-menu a {
   .landPage {
     padding: 30px;
   }
-    .navTombol {
+  .navTombol {
     display: block;
     z-index: 1200;
   }
@@ -627,7 +653,7 @@ span .nav-menu a {
     display: none;
   }
 
-  .nav-menu a{
+  .nav-menu a {
     font-size: 16px;
   }
   /* hide the regular nav links on smaller screens */
@@ -654,198 +680,436 @@ span .nav-menu a {
   }
   .bagianKanan img {
     width: 300px;
-  } 
+  }
   #Visi {
-  gap: 30px;
-}
+    gap: 30px;
+  }
 
-.titleVisi {
-  width: 70%;
-}
-.titleVisi h1 {
-  font-size: 18px;
-}
-.visi {
-  width: 70%;
+  .titleVisi {
+    width: 70%;
+  }
+  .titleVisi h1 {
+    font-size: 18px;
+  }
+  .visi {
+    width: 70%;
+  }
 
-}
+  /* tanda kutip kiri */
+  .visi .quote-left {
+    font-size: 100px;
+  }
 
+  /* tanda kutip kanan */
+  .visi .quote-right {
+    font-size: 100px;
+  }
 
-/* tanda kutip kiri */
-.visi .quote-left {
-  font-size: 100px;
-}
+  .awalMisi {
+    width: 85vw;
+  }
+  .awalMisi h1 {
+    font-size: 24px;
+    width: 70vw;
+  }
 
-/* tanda kutip kanan */
-.visi .quote-right {
-  font-size: 100px;
-}
+  .awalMisi button {
+    font-size: 16px;
+  }
 
-.awalMisi {
-  width: 85vw;
-}
-.awalMisi h1 {
-  font-size: 24px;
-  width: 70vw;
-}
+  .misi {
+    gap: 10px;
+    margin-bottom: 100px;
+  }
 
-.awalMisi button {
-  font-size: 16px;
-}
+  .isiMisi {
+    width: 70vw;
+    padding: 20px;
+  }
+  .nomor {
+    font-size: 30px;
+    width: 120px;
+    height: 70px;
+  }
+  .isiMisi h1 {
+    font-size: 16px;
+  }
 
+  .misi2 {
+    gap: 100px;
+    margin-bottom: 100px;
+  }
+  .isiMisi2 {
+    width: 70vw;
+    padding: 20px;
+    gap: 30px;
+  }
+  .nomor2 {
+    font-size: 30px;
+    width: 120px;
+    height: 70px;
+  }
+  .isiMisi2 h1 {
+    font-size: 16px;
+  }
 
-.misi {
-  gap: 10px;
-  margin-bottom: 100px;
-}
+  .proKer {
+    margin-bottom: 100px;
+  }
+  .titleProker {
+    text-align: center;
+    font-weight: 800;
+    margin-top: 100px;
+    width: 80vw;
+    background-color: var(--primary);
+    color: var(--text);
+    padding: 15px;
+    border-radius: 30px;
+  }
 
-.isiMisi {
-  width: 70vw;
-  padding: 20px;
-}
-.nomor {
-  font-size: 30px;
-  width: 120px;
-  height: 70px;
-}
-.isiMisi h1 {
-  font-size: 16px;
-}
+  .titleProker h1 {
+    font-size: 20px;
+    font-weight: bolder;
+  }
 
-.misi2 {
-  gap: 100px;
-  margin-bottom: 100px;
-}
-.isiMisi2 {
-  width: 70vw;
-  padding: 20px;
-  gap: 30px;
-}
-.nomor2 {
-  font-size: 30px;
-  width: 120px;
-  height: 70px;
-}
-.isiMisi2 h1 {
-  font-size: 16px;
-}
+  .wrapper {
+    width: 90vw;
+  }
 
+  .judulProker1 {
+    width: 250px;
+    height: 200px;
+    padding: 20px;
+    gap: 20px;
+  }
+  .judulProker2 {
+    background-color: var(--accent);
+    width: 225px;
+    height: 200px;
+    padding: 20px;
+    gap: 20px;
+  }
 
-.proKer {
-  margin-bottom: 100px;
-}
-.titleProker {
-  text-align: center;
-  font-weight: 800;
-  margin-top: 100px;
-  width: 80vw;
-  background-color: var(--primary);
-  color: var(--text);
-  padding: 15px;
-  border-radius: 30px;
-}
+  .judulProker1 h1,
+  .judulProker2 h1 {
+    font-size: 16px;
+  }
 
-.titleProker h1 {
-  font-size: 20px;
-  font-weight: bolder;
-}
+  .judulProker1 button,
+  .judulProker2 button {
+    width: 175px;
+    height: 75px;
+    padding: 10px 10px;
+  }
 
-.wrapper {
-  width: 90vw;
-}
+  .isiProker1 .background1 h1,
+  .isiProker2 .background2 h1 {
+    font-size: 24px;
+  }
 
-.judulProker1 {
-  width: 250px;
-  height: 200px;
-  padding: 20px;
-  gap: 20px;
-}
-.judulProker2 {
-  background-color: var(--accent);
-  width: 225px;
-  height: 200px;
-  padding: 20px;
-  gap: 20px;
-}
+  .footer-content {
+    gap: 0px;
+    flex-direction: row;
+    align-items: center;
+  }
 
-.judulProker1 h1,
-.judulProker2 h1 {
-  font-size: 16px;
-}
+  .sosmedFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .nav-menu span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+  .nav-menu span a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 800;
+    transition: all 0.3s ease-in-out;
+  }
 
+  .sosmedFooter a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 32px;
+  }
+  .copyright {
+    border-top: #444 2px solid;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+  }
+  .copyright p {
+    margin: 0;
+    font-size: 20px;
+  }
 
-.judulProker1 button,
-.judulProker2 button {
-  width: 175px;
-  height: 75px;
-  padding: 10px 10px;}
-
-
-.isiProker1 .background1 h1,
-.isiProker2 .background2 h1 {
-  font-size: 24px;
-}
-
-.footer-content {
-  gap: 0px;
-  flex-direction: row;
-  align-items: center;
-}
-
-.sosmedFooter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-.nav-menu span{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 30px;
-}
- .nav-menu span a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 800;
-  transition: all 0.3s ease-in-out;
-}
-
-.sosmedFooter a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 32px;
-}
-.copyright {
-  border-top: #444 2px solid;
-  padding-top: 10px;
-  text-align: center;
-  font-size: 14px;
-  color: #aaa;
-}
-.copyright p {
-  margin: 0;
-  font-size: 20px;
-}
-
-.logo img {
-  width: 150px;
-  /* Sesuaikan ukuran logo */
-}
+  .logo img {
+    width: 150px;
+    /* Sesuaikan ukuran logo */
+  }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
+  .kososng {
+   height: 50px;
+  }
   .navTombol {
     display: block;
+    z-index: 1200;
+    margin: 10px;
   }
   #bars {
     font-size: 26px;
+    color: var(--text);
+    cursor: pointer;
   }
   .nav-menu {
-    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: rgba(52, 152, 219, 0.9);
+    width: 200px;
+    padding: 20px;
+    border-radius: 30px 0px 0px 30px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+  }
+  .nav-menu.active {
+    transform: translateX(0%);
   }
   .landPage {
     padding: 30px;
+  }
+  .navbar {
+    padding: 8px 20px;
+  }
+  .navbar .logo img {
+    width: 200px;
+  }
+  .salam {
+    font-size: 35px;
+  }
+
+  /* small adjustments */
+
+  .landPage {
+    flex-direction: column-reverse;
+    gap: 30px;
+    text-align: center;
+  }
+  .bagianKiri {
+    align-items: center;
+  }
+  .sosmed {
+    justify-content: center;
+    width: 100%;
+  }
+  .sosmed i {
+    font-size: 30px;
+  }
+  .bagianKanan img {
+    width: 300px;
+  }
+  .bagianKiri .text {
+    font-size: 16px;
+  }
+  .btn {
+    gap: 20px;
+    margin-top: 0px;
+  }
+
+  .btn a button {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+
+  #Visi {
+    gap: 30px;
+  }
+
+  .titleVisi {
+    width: 70%;
+  }
+  .titleVisi h1 {
+    font-size: 14px;
+  }
+  .visi {
+    width: 80%;
+    margin-top: 0;
+  }
+  /* target the element with class 'isi-visi' (more specific than .visi h1) */
+  .visi .isi-visi {
+    font-size: 20px;
+  }
+
+  /* tanda kutip kiri */
+  .visi .quote-left {
+    font-size: 60px;
+    left: -10px;
+    top: -50px;
+  }
+
+  /* tanda kutip kanan */
+  .visi .quote-right {
+    font-size: 50px;
+    right: 10px;
+    bottom: -50px;
+  }
+
+  .awalMisi {
+    width: 85vw;
+    gap: 10px;
+  }
+  .awalMisi h1 {
+    font-size: 14px;
+    width: 100vw;
+  }
+
+  .awalMisi a button {
+    font-size: 10px;
+    width: 120px;
+    height: 50px;
+    padding: 0;
+  }
+
+  .misi {
+    gap: 10px;
+    margin-bottom: 50px;
+  }
+
+  .isiMisi {
+    width: 80vw;
+    padding: 10px;
+    gap: 10px;
+  }
+  .nomor {
+    font-size: 20px;
+    width: 120px;
+    height: 50px;
+  }
+  .isiMisi h1 {
+    font-size: 12px;
+  }
+
+  .misi2 {
+    gap: 10px;
+    margin-bottom: 50px;
+  }
+  .isiMisi2 {
+    width: 80vw;
+    padding: 10px;
+    gap: 10px;
+  }
+  .nomor2 {
+    font-size: 20px;
+    width: 120px;
+    height: 50px;
+  }
+  .isiMisi2 h1 {
+    font-size: 12px;
+  }
+
+  .proKer {
+    margin-bottom: 100px;
+  }
+  .titleProker {
+    text-align: center;
+    font-weight: 800;
+    margin-top: 100px;
+    width: 80vw;
+    background-color: var(--primary);
+    color: var(--text);
+    padding: 15px;
+    border-radius: 30px;
+  }
+
+  .titleProker h1 {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  .wrapper {
+    width: 90vw;
+  }
+
+  .judulProker1 {
+    width: 250px;
+    height: 200px;
+    padding: 20px;
+    gap: 20px;
+  }
+  .judulProker2 {
+    background-color: var(--accent);
+    width: 250px;
+    height: 200px;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .judulProker1 h1,
+  .judulProker2 h1 {
+    font-size: 16px;
+    padding: 20px 10px;
+  }
+
+  .judulProker1 button,
+  .judulProker2 button {
+    width: 175px;
+    height: 75px;
+    padding: 10px 10px;
+  }
+
+  .isiProker1 .background1 h1,
+  .isiProker2 .background2 h1 {
+    font-size: 14px;
+    padding: 20px 0px;
+  }
+
+  .footer-content {
+    gap: 0px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .sosmedFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+
+  .sosmedFooter a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 32px;
+  }
+  .copyright {
+    border-top: #444 2px solid;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+  }
+  .copyright p {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .logo img {
+    width: 150px;
+    /* Sesuaikan ukuran logo */
   }
 }
