@@ -859,7 +859,7 @@ footer {
 @media (min-width: 320px) and (max-width: 767px) {
 
   nav{
-    max-width: 100%;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -1096,6 +1096,10 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 30px;
+  }
+
+  .footer-content .nav-menu {
+    display: none;
   }
 
 
