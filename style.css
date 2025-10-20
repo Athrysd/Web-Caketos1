@@ -162,7 +162,12 @@ nav {
   background-color: var(--primary);
   color: var(--bg);
 }
-
+.bagianKanan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 .bagianKanan img {
   width: 500px;
   border-radius: 20px;
@@ -272,6 +277,7 @@ nav {
   justify-content: space-between;
   gap: 50px;
   margin-bottom: 100px;
+  overflow: hidden;
 }
 
 .isiMisi {
@@ -283,6 +289,7 @@ nav {
   gap: 30px;
   background-color: rgba(52, 152, 219, 0.6);
   border-radius: 50px 0px 0px 50px;
+  overflow: hidden;
 }
 .nomor {
   background-color: var(--primary);
@@ -295,6 +302,7 @@ nav {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  overflow: hidden;
 }
 .isiMisi h1 {
   font-size: 24px;
@@ -309,6 +317,7 @@ nav {
   justify-content: space-between;
   gap: 100px;
   margin-bottom: 100px;
+  overflow: hidden;
 }
 .isiMisi2 {
   width: 70vw;
@@ -319,6 +328,7 @@ nav {
   gap: 30px;
   background-color: var(--accent);
   border-radius: 0px 50px 50px 0px;
+  overflow: hidden;
 }
 .nomor2 {
   background-color: var(--support);
