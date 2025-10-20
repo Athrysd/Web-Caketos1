@@ -345,12 +345,10 @@ nav {
   flex-direction: column;
   margin-bottom: 100px;
 }
-.titleProKer {
+.titleProker{
   text-align: center;
-  font-size: 36px;
-  font-weight: 800;
-  margin-top: 100px;
   width: 60vw;
+  height: 100px;
   background-color: var(--primary);
   color: var(--text);
   padding: 5px 0;
