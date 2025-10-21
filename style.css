@@ -36,12 +36,12 @@ nav {
   top: 0;
   left: 0;
   z-index: 1000;
-overflow-x: hidden;
+/* overflow-x: hidden; */
 }
 
 #bars {
   display: none;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .navbar {
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
@@ -268,13 +268,13 @@ color: var(--secondary);
   align-items: center;
   justify-content: space-between;
   gap: 60px;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   width: 80vw;
 }
 .awalMisi h1 {
   font-size: 36px;
   font-weight: 800;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   width: 50vw;
   line-height: 1.5;
   color: var(--accent);
@@ -288,7 +288,7 @@ color: var(--secondary);
   border-radius: 30px;
   cursor: pointer;
   font: 900 20px Arial, sans-serif;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   transition: all 0.5s ease-in-out;
 }
 
