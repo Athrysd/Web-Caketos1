@@ -8,17 +8,20 @@
   --soft-gray: #f4f4f4; /* Soft Gray */
 }
 
+
 a {
   color: var(--support);
   text-decoration: none;
 }
 
 .kosong {
-  height: 80px;
+  height: 100px;
+  display: block;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -28,6 +31,30 @@ body {
   background-color: var(--bg);
   color: var(--text);
   overflow-x: hidden;
+}
+
+/* Prevent AOS animations from causing horizontal overflow */
+* {
+  box-sizing: border-box;
+}
+
+[data-aos] {
+  overflow: hidden;
+}
+
+/* Disable AOS horizontal animations on mobile to prevent overflow */
+@media (max-width: 767px) {
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: none !important;
+    opacity: 0;
+  }
+  
+  [data-aos="fade-left"].aos-animate,
+  [data-aos="fade-right"].aos-animate {
+    transform: none !important;
+    opacity: 1;
+  }
 }
 
 nav {
@@ -99,23 +126,25 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 120px;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .bagianKiri {
   display: flex;
-  overflow-x: hidden;
+  overflow: none;
+  gap: 15px;
   flex-direction: column;
+  overflow: none;
 }
 .text {
   font-size: 20px;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   font-weight: 800;
   margin: 0;
-  line-height: 1;
+  line-height: 1.5;
 }
 .text h1 span {
   color: var(--secondary);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .salam {
   font-size: 58px;
@@ -123,7 +152,7 @@ nav {
 }
 
 .sosmed {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   display: flex;
   justify-content: start;
   gap: 50px;
@@ -133,7 +162,7 @@ nav {
 .sosmed i {
   font-size: 50px;
   color: var(--accent);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .sosmed i:hover {
   transform: scale(1.2);
@@ -149,7 +178,7 @@ nav {
 .btn {
   display: flex;
   justify-content: start;
-overflow-x: hidden;
+/* overflow-x: hidden; */
 gap: 50px;
 margin-top: 30px;
 padding: 15px 0px;
@@ -166,10 +195,10 @@ font-size: 20px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   border: 4px solid var(--primary);
   color: var(--primary);
-  font: 900 20px Arial, sans-serif;
+  font: 900 18px Arial, sans-serif;
   /* filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5)); */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease-in-out;
@@ -180,20 +209,26 @@ font-size: 20px;
   color: var(--bg);
 }
 .bagianKanan {
-  overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  min-height: 400px; /* Berikan ruang cukup untuk animasi float */
 }
-.bagianKanan img {
-  width: 500px;
-  border-radius: 20px;
+.bagianKanan .img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  animation: float 5s ease-in-out infinite;
+  z-index: 100;
 }
+
+
+
 
 #Visi {
   display: flex;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -214,11 +249,11 @@ font-size: 20px;
 .titleVisi h1 {
   font-size: 30px;
   font-weight: bolder;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .visi {
-  max-width: 900px;
-  width: 90%;
+  max-width: 800px;
+  width: 100%;
   margin: 50px auto 0;
   position: relative;
   display: flex;
@@ -231,7 +266,7 @@ font-size: 20px;
   font-size: 28px;
   font-weight: 600;
   text-align: justify;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   line-height: 1.5;
   position: relative;
   z-index: 1;
@@ -241,10 +276,10 @@ font-size: 20px;
 /* tanda kutip kiri */
 .visi .quote-left {
   position: absolute;
-  left: -50px;
-  top: -70px;
-  font-size: 120px;
-overflow-x: hidden;
+  left: -2px;
+  top: -50px;
+  font-size: 75px;
+  /* overflow-x: hidden; */
 color: var(--secondary);
 font-family: "Times New Roman", Times, serif;
   font-weight: bold;
@@ -253,11 +288,11 @@ font-family: "Times New Roman", Times, serif;
 /* tanda kutip kanan */
 .visi .quote-right {
   position: absolute;
-  right: -40px;
-  bottom: -120px;
-overflow-x: hidden;
-font-size: 120px;
-color: var(--secondary);
+  right: -2px;
+  bottom: -90px;
+  /* overflow-x: hidden; */
+  font-size: 90px;
+  color: var(--secondary);
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
 }
@@ -313,13 +348,13 @@ color: var(--secondary);
   width: 70vw;
   padding: 20px;
   display: flex;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   flex-direction: row;
   align-items: center;
   gap: 30px;
   background-color: rgba(52, 152, 219, 0.6);
   border-radius: 50px 0px 0px 50px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .nomor {
   background-color: var(--primary);
@@ -484,7 +519,8 @@ color: var(--secondary);
   justify-content: space-around;
   width: 250px;
   color: var(--support);
-  padding: 10px 10px;
+  padding: 5px 5px;
+  margin-top: -15px;
   border: 4px solid var(--bg);
   border-radius: 30px;
   cursor: pointer;
@@ -553,7 +589,7 @@ color: var(--secondary);
 
 .isiProker1 .background1 h1,
 .isiProker2 .background2 h1 {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
   color: var(--text);
@@ -565,10 +601,10 @@ color: var(--secondary);
   right: 20px;
   background-color: var(--support);
   color: var(--bg);
-  padding: 10px 20px;
+  padding: 5px 5px;
   border-radius: 30px;
   cursor: pointer;
-  font: 900 18px Arial, sans-serif;
+  font: 700 16px Arial, sans-serif;
   transition: all 0.5s ease-in-out;
   border: 4px solid var(--support);
 }
@@ -935,6 +971,10 @@ footer {
 
 @media (min-width: 320px) and (max-width: 767px) {
 
+
+  .kosong {
+   height: 70px;
+  }
   nav{
     width: 100%;
     position: fixed;
@@ -985,28 +1025,43 @@ footer {
   }
   .salam {
     font-size: 35px;
-  }
-
+    margin-bottom: -15px;
+    }.text{
+    font-size: 16px;
+    margin-bottom: -20px;
+    }
   /* small adjustments */
 
   .landPage {
     flex-direction: column-reverse;
-    gap: 30px;
+    /* gap: 10px; */
     text-align: center;
   }
   .bagianKiri {
     align-items: center;
+    /* line-height: 1; */
   }
   .sosmed {
     justify-content: center;
     width: 100%;
   }
   .sosmed i {
-    font-size: 30px;
+    font-size: 40px;
   }
-  .bagianKanan img {
-    width: 300px;
-  }
+.bagianKanan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px; /* Berikan ruang cukup untuk animasi float */
+  
+}
+.bagianKanan .img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  animation: float 5s ease-in-out infinite;
+  z-index: 100;
+}
   .bagianKiri .text {
     font-size: 16px;
   }
@@ -1026,9 +1081,10 @@ footer {
 
   .titleVisi {
     width: 70%;
+    padding: 10px;
   }
   .titleVisi h1 {
-    font-size: 14px;
+    font-size: 12px;
   }
   .visi {
     width: 80%;
@@ -1036,14 +1092,14 @@ footer {
   }
   /* target the element with class 'isi-visi' (more specific than .visi h1) */
   .visi .isi-visi {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   /* tanda kutip kiri */
   .visi .quote-left {
-    font-size: 60px;
-    left: -10px;
-    top: -50px;
+    font-size: 50px;
+    left: -1px;
+    top: -20px;
   }
 
   /* tanda kutip kanan */
@@ -1056,17 +1112,21 @@ footer {
   .awalMisi {
     width: 85vw;
     gap: 10px;
+    flex-direction: column;
+    align-items: center;
   }
   .awalMisi h1 {
     font-size: 14px;
-    width: 100vw;
+    width: 80vw;
+    text-align: center;
   }
 
   .awalMisi a button {
-    font-size: 10px;
-    width: 120px;
+    font-size: 12px;
+    width: 140px;
     height: 50px;
-    padding: 0;
+    padding: 10px 15px;
+    border: 3px solid var(--support);
   }
 
   .misi {
@@ -1121,7 +1181,7 @@ footer {
   }
 
   .titleProker h1 {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bolder;
   }
 
@@ -1146,20 +1206,40 @@ footer {
   .judulProker1 h1,
   .judulProker2 h1 {
     font-size: 16px;
-    padding: 20px 10px;
+    padding: 10px 10px;
   }
 
   .judulProker1 button,
   .judulProker2 button {
     width: 175px;
     height: 75px;
-    padding: 10px 10px;
+    padding: 5px 5px;
+    margin-bottom: 5px;
+  }
+
+  .isiProker1 .background1,
+  .isiProker2 .background2 {
+    width: 90%;
+    height: auto;
+    padding: 30px 20px;
   }
 
   .isiProker1 .background1 h1,
   .isiProker2 .background2 h1 {
-    font-size: 14px;
-    padding: 20px 0px;
+    font-size: 12px;
+    padding: 10px 0px;
+    line-height: 1.5;
+  }
+  
+  .isiProker1 .background1 .tutup,
+  .isiProker2 .background2 .tutup {
+    top: 10px;
+    right: 10px;
+    padding: 5px 15px 0px 15px;
+    font-size: 10px;
+    width: 75px;
+    height: 30px;
+
   }
 
   .footer-content {
@@ -1200,5 +1280,16 @@ footer {
   .logo img {
     width: 150px;
     /* Sesuaikan ukuran logo */
+  }
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(20px);
+  }
+  100% {
+    transform: translatey(0px);
   }
 }

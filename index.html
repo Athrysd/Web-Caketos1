@@ -68,7 +68,7 @@
           data-aos-offset="500"
           data-aos-duration="750"
         >
-          <img src="" alt="" />
+          <div class="img"><img src="" alt="" /></div>
         </div>
       </div>
     </section>
@@ -107,9 +107,11 @@
     </section>
 
     <!-- Misi -->
-    <div class="kosong" id="misi"></div>
-
+    
     <section>
+      <div class="kosong" style="height: 150px;
+      " id="misi"></div>
+
       <div
         class="misi"
         data-aos="fade-left"
@@ -205,7 +207,7 @@
 
         <div class="wrapper">
           <div class="judulProker1" data-aos="zoom-in" data-aos-duration="1000">
-            <h1>School Podcast</h1>
+            <h1>School <br> Podcast</h1>
             <button id="pelajari1">
               Pelajari
               <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
@@ -240,7 +242,12 @@
             </div>
           </div>
 
-          <div id="judulProker3" class="judulProker1" data-aos="zoom-in" data-aos-duration="1000">
+          <div
+            id="judulProker3"
+            class="judulProker1"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
             <h1>FORAS (Forum Aspirasi)</h1>
             <button id="pelajari3">
               Pelajari
@@ -345,7 +352,12 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
     <script>
-      AOS.init();
+      AOS.init({
+        once: true, // animasi hanya berjalan sekali
+        duration: 800, // durasi default
+        offset: 100, // jarak pemicu animasi
+      });
+      window.addEventListener("load", () => AOS.refresh());
     </script>
   </body>
 </html>
