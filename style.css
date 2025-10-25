@@ -8,7 +8,6 @@
   --soft-gray: #f4f4f4; /* Soft Gray */
 }
 
-
 a {
   color: var(--support);
   text-decoration: none;
@@ -28,7 +27,14 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   min-height: 1000px;
-  background-color: var(--bg);
+  background: linear-gradient(
+    120deg,
+    #fef9e7 0%,
+    #ebf5fb 30%,
+    #e8f8f5 60%,
+    #fef5e7 100%
+  );
+  background-attachment: fixed;
   color: var(--text);
   overflow-x: hidden;
 }
@@ -49,7 +55,7 @@ body {
     transform: none !important;
     opacity: 0;
   }
-  
+
   [data-aos="fade-left"].aos-animate,
   [data-aos="fade-right"].aos-animate {
     transform: none !important;
@@ -63,7 +69,7 @@ nav {
   top: 0;
   left: 0;
   z-index: 1000;
-/* overflow-x: hidden; */
+  /* overflow-x: hidden; */
 }
 
 #bars {
@@ -168,22 +174,22 @@ nav {
   transform: scale(1.2);
   transition: all 0.3s ease-in-out;
 }
-.sosmed span a i:hover{
+.sosmed span a i:hover {
   color: var(--secondary);
 }
-.sosmed span1 a i:hover{
+.sosmed span1 a i:hover {
   color: var(--support);
 }
 
 .btn {
   display: flex;
   justify-content: start;
-/* overflow-x: hidden; */
-gap: 50px;
-margin-top: 30px;
-padding: 15px 0px;
-color: var(--text);
-font-size: 20px;
+  /* overflow-x: hidden; */
+  gap: 50px;
+  margin-top: 30px;
+  padding: 15px 0px;
+  color: var(--text);
+  font-size: 20px;
   font-weight: 800;
   border: none;
   border-radius: 10px;
@@ -222,9 +228,6 @@ font-size: 20px;
   animation: float 5s ease-in-out infinite;
   z-index: 100;
 }
-
-
-
 
 #Visi {
   display: flex;
@@ -280,8 +283,8 @@ font-size: 20px;
   top: -50px;
   font-size: 75px;
   /* overflow-x: hidden; */
-color: var(--secondary);
-font-family: "Times New Roman", Times, serif;
+  color: var(--secondary);
+  font-family: "Times New Roman", Times, serif;
   font-weight: bold;
 }
 
@@ -427,7 +430,7 @@ font-family: "Times New Roman", Times, serif;
   flex-direction: column;
   margin-bottom: 100px;
 }
-.titleProker{
+.titleProker {
   /* overflow-x: hidden; */
   text-align: center;
   width: 60vw;
@@ -497,7 +500,6 @@ font-family: "Times New Roman", Times, serif;
   font-weight: 800;
   color: var(--bg);
 }
-
 
 .judulProker1:hover {
   background-color: var(--accent);
@@ -656,7 +658,7 @@ footer {
   align-items: center;
   gap: 30px;
 }
-.nav-menu span  {
+.nav-menu span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -683,10 +685,10 @@ footer {
   transform: scale(1.2);
   transition: all 0.3s ease-in-out;
 }
-.sosmedFooter span a i:hover{
+.sosmedFooter span a i:hover {
   color: var(--secondary);
 }
-.sosmedFooter span1 a i:hover{
+.sosmedFooter span1 a i:hover {
   color: var(--support);
 }
 .copyright {
@@ -761,7 +763,7 @@ footer {
     backdrop-filter: blur(10px);
     gap: 20px;
   }
-  
+
   .nav-menu.active {
     transform: translateX(0%);
   }
@@ -970,12 +972,10 @@ footer {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-
-
   .kosong {
-   height: 70px;
+    height: 70px;
   }
-  nav{
+  nav {
     width: 100%;
     position: fixed;
     top: 0;
@@ -983,7 +983,7 @@ footer {
     z-index: 1000;
   }
   .kosong {
-   height: 50px;
+    height: 50px;
   }
   .navTombol {
     display: block;
@@ -1026,10 +1026,11 @@ footer {
   .salam {
     font-size: 35px;
     margin-bottom: -15px;
-    }.text{
+  }
+  .text {
     font-size: 16px;
     margin-bottom: -20px;
-    }
+  }
   /* small adjustments */
 
   .landPage {
@@ -1048,20 +1049,19 @@ footer {
   .sosmed i {
     font-size: 40px;
   }
-.bagianKanan {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 200px; /* Berikan ruang cukup untuk animasi float */
-  
-}
-.bagianKanan .img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  animation: float 5s ease-in-out infinite;
-  z-index: 100;
-}
+  .bagianKanan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; /* Berikan ruang cukup untuk animasi float */
+  }
+  .bagianKanan .img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite;
+    z-index: 100;
+  }
   .bagianKiri .text {
     font-size: 16px;
   }
@@ -1230,7 +1230,7 @@ footer {
     padding: 10px 0px;
     line-height: 1.5;
   }
-  
+
   .isiProker1 .background1 .tutup,
   .isiProker2 .background2 .tutup {
     top: 10px;
@@ -1239,7 +1239,6 @@ footer {
     font-size: 10px;
     width: 75px;
     height: 30px;
-
   }
 
   .footer-content {
@@ -1258,7 +1257,6 @@ footer {
   .footer-content .nav-menu {
     display: none;
   }
-
 
   .sosmedFooter a {
     color: #fff;
