@@ -220,7 +220,7 @@ nav {
   align-items: center;
   min-height: 400px; /* Berikan ruang cukup untuk animasi float */
 }
-.bagianKanan .img {
+.bagianKanan img {
   width: 350px;
   height: 350px;
   border-radius: 50%;
