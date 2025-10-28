@@ -1059,6 +1059,7 @@ footer {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    background-color : var(--accent)
     animation: float 5s ease-in-out infinite;
     z-index: 100;
   }
