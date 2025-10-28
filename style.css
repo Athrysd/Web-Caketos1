@@ -1055,7 +1055,7 @@ footer {
     align-items: center;
     min-height: 200px; /* Berikan ruang cukup untuk animasi float */
   }
-  .bagianKanan .img {
+  .bagianKanan img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
